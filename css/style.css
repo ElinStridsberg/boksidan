@@ -1,0 +1,44 @@
+:root {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header {
+    display: flex;
+    background-color: #00ff4c;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+
+.hero {
+    position: relative;
+    height: 20rem;
+
+}
+
+.herocontent {
+    position: absolute;
+    top: 50%;
+}
+
+.book-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
