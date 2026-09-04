@@ -112,7 +112,9 @@
         <section class="köp-nu" id="köpnu">
             <h2>Köp nu</h2>
             <img src="#" alt="köp-nu">
+        
             <form>
+                <div class="form-group">
                 <label for="antal">Antal:</label>
                 <select id="antal" name="antal">
                     <option value="1">1</option>
@@ -121,22 +123,33 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
+                </div>
 
-                <label for="namn">Namn:</label>
-                <input type="text" id="namn" name="namn" placeholder="Namn">
+                <div class="form-group">
+                    <label for="namn">Namn:</label>
+                    <input type="text" id="namn" name="namn" placeholder="Namn">
+                </div>
 
+            <div class="form-group">
                 <label for="adress">Adress:</label>
                 <input type="text" id="adress" name="adress" placeholder="Adress">
+            </div>
 
+            <div class="form-group">    
                 <label for="postnummer">Postnummer:</label>
                 <input type="text" id="postnummer" name="postnummer" placeholder="Postnummer">
+            </div>
 
+            <div class="form-group">
                 <label for="postort">Postort:</label>
                 <input type="text" id="postort" name="postort" placeholder="Postort">
+            </div>
 
-                <input type="checkbox" id="villkor" name="villkor" required>
-                <label for="villkor">Jag godkänner villkoren</label>
-
+                <div class="villkor">
+                    <input type="checkbox" id="villkor" name="villkor" required>
+                    <label for="villkor">Jag godkänner villkoren</label>
+                </div>
+                
                 <button type="submit">KÖP</button>
 
             </form>
