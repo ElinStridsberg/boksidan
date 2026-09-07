@@ -45,7 +45,7 @@ nav ul {
     border: 1px solid black;
 }
 
-.herocontent {
+.hero-content {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -112,11 +112,13 @@ nav ul {
     width: 100%;
 }
 
+.purchase {
+    padding: 2rem 1.5rem;
+}
+
 .purchase-content {
     border: 1px solid black;
     width: 100%;
-    padding: 2rem 1.5rem;
-
     display: flex;
     flex-direction: column;
 }
@@ -140,7 +142,7 @@ form {
     gap: 0.5rem;
 }
 
-.villkor {
+.terms {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -209,7 +211,7 @@ footer {
         gap: 2rem;
     }
 
-        .purchase-content img,
+    .purchase-content img,
     .purchase-content form {
         flex: 1;
     }
