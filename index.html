@@ -10,22 +10,23 @@
 </head>
 
 <body>
-    <header>
-        <img src="./images/logo.png" alt="Logga" class="logo">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#start">Start</a>
-                </li>
-                <li>
-                    <a href="#boken">Boken</a>
-                </li>
-                <li><a href="#författaren">Författaren</a></li>
-                <li><a href="#innehåll">Innehåll</a></li>
-                <li><a href="#köpnu">Köp nu</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <img src="./images/logo.png" alt="Logga" class="logo">
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-button">☰</label>
+
+    <nav>
+        <ul>
+            <li><a href="#start">Start</a></li>
+            <li><a href="#boken">Boken</a></li>
+            <li><a href="#författaren">Författaren</a></li>
+            <li><a href="#innehåll">Innehåll</a></li>
+            <li><a href="#köpnu">Köp nu</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
         <section class="hero" id="start">
             <img src="./images/hero.png" alt="Hero" class="heroimage">
@@ -60,6 +61,7 @@
         <section class="content" id="innehåll">
             <h2>Innehållet</h2>
 
+            <div class="chapters">
             <div class="content-card">
                 <img src="./images/content1.png" alt="Innehåll 1" class="content-image">
                 <div class="content-text">
@@ -107,52 +109,54 @@
                     <p>Text om innehåll 6</p>
                 </div>
             </div>
+            </div>
         </section>
 
         <section class="köp-nu" id="köpnu">
             <h2>Köp nu</h2>
-            <img src="#" alt="köp-nu">
-        
-            <form>
-                <div class="form-group">
-                <label for="antal">Antal:</label>
-                <select id="antal" name="antal">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                </div>
+            <div class="purchase-content">
+                <img src="#" alt="köp-nu">
+                <form>
+                    <div class="form-group">
+                    <label for="antal">Antal:</label>
+                    <select id="antal" name="antal">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="namn">Namn:</label>
+                        <input type="text" id="namn" name="namn" placeholder="Namn">
+                    </div>
 
                 <div class="form-group">
-                    <label for="namn">Namn:</label>
-                    <input type="text" id="namn" name="namn" placeholder="Namn">
+                    <label for="adress">Adress:</label>
+                    <input type="text" id="adress" name="adress" placeholder="Adress">
                 </div>
 
-            <div class="form-group">
-                <label for="adress">Adress:</label>
-                <input type="text" id="adress" name="adress" placeholder="Adress">
-            </div>
-
-            <div class="form-group">    
-                <label for="postnummer">Postnummer:</label>
-                <input type="text" id="postnummer" name="postnummer" placeholder="Postnummer">
-            </div>
-
-            <div class="form-group">
-                <label for="postort">Postort:</label>
-                <input type="text" id="postort" name="postort" placeholder="Postort">
-            </div>
-
-                <div class="villkor">
-                    <input type="checkbox" id="villkor" name="villkor" required>
-                    <label for="villkor">Jag godkänner villkoren</label>
+                <div class="form-group">    
+                    <label for="postnummer">Postnummer:</label>
+                    <input type="text" id="postnummer" name="postnummer" placeholder="Postnummer">
                 </div>
-                
-                <button type="submit">KÖP</button>
 
-            </form>
+                <div class="form-group">
+                    <label for="postort">Postort:</label>
+                    <input type="text" id="postort" name="postort" placeholder="Postort">
+                </div>
+
+                    <div class="villkor">
+                        <input type="checkbox" id="villkor" name="villkor" required>
+                        <label for="villkor">Jag godkänner villkoren</label>
+                    </div>
+                    
+                    <button type="submit">KÖP</button>
+
+                </form>
+            </div>
         </section>
     </main>
     <footer>
