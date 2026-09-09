@@ -184,8 +184,8 @@ nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #FFFCF2;
-    border-radius: 0.75rem;
+    background-color: #ffff;
+    /* border-radius: 0.75rem; */
     overflow: hidden;
 }
 
@@ -220,26 +220,36 @@ nav ul {
 
 .purchase {
     padding: 2rem 1.5rem;
+    background-color: #F7F4EF;
+    font-family: var(--font-body);
 }
 
+.purchase h2 {
+    margin-top: 0;
+    font-family: var(--font-heading);
+}
+
+
 .purchase-content {
-    border: 1px solid black;
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .purchase-content img {
     max-width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
     display: block;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    border-radius: 0.75rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    font-family: var(--font-body);
 }
 
 .form-group {
@@ -248,10 +258,31 @@ form {
     gap: 0.5rem;
 }
 
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 1px solid #CFC7BF;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
 .terms {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+form button {
+    padding: 0.85rem 1.5rem;
+    border: none;
+    background-color: var(--color-berry);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
 }
 
 footer {
@@ -308,6 +339,22 @@ footer {
     .info-text {
     width: 55%;
     }
+
+    .purchase-content {
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    }
+
+    .purchase-content img {
+    width: 45%;
+    object-fit: cover;
+    }
+
+    .purchase-content form {
+        width: 55%;
+    }
+
     footer {
         flex-direction: row; 
         justify-content: space-between;
@@ -322,11 +369,18 @@ footer {
     .purchase-content {
         flex-direction: row;    
         gap: 2rem;
+        align-items: stretch;
+        max-width: 1100px;
+        margin: 0 auto;
     }
 
-    .purchase-content img,
+    .purchase-content img {
+        width: 42%;
+        height: auto;
+        object-fit: cover;
+    }
+
     .purchase-content form {
-        flex: 1;
+        width: 58%;
     }
-
 }
