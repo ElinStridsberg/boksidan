@@ -10,11 +10,13 @@
     --color-wine: #6F2F49;
     --color-black: #252422;
     --color-cream: #f7f1e9;
+    --color-border: #CFC7BF;
     --color-white: #FFFDF9;
 }
 
 body {
     margin: 0;
+    font-family: var(--font-body);
     background-color: var(--color-cream);
     color: var(--color-black);
 }
@@ -48,7 +50,7 @@ header {
 nav {
     display: none;
     width: 100%;
-    padding-bottom: 0.50rem;
+    padding-bottom: 0.5rem;
 }
 
 nav ul {
@@ -69,14 +71,13 @@ nav a {
     display: block;
     padding: 0.5rem 0;
     font-size: 0.8rem;
-
 }
 
 nav a:active {
     color: var(--color-berry);
 }
 
-#menu-toggle:checked ~ nav {
+#menu-toggle:checked~nav {
     display: block;
 }
 
@@ -105,7 +106,7 @@ nav a:active {
     padding: 1.25rem;
     width: 74%;
     background-color: var(--color-cream);
-    border-radius: 0.15rem; 
+    border-radius: 0.15rem;
 }
 
 .hero-content .eyebrow {
@@ -278,7 +279,7 @@ h3 {
     border-left: 1px solid var(--color-berry);
     padding-left: 0.6rem;
 
-    margin: 0 0 0.6rem 0; 
+    margin: 0 0 0.6rem 0;
 }
 
 .content-text p {
@@ -316,12 +317,13 @@ h3 {
     gap: 2rem;
 }
 
-.purchase > p {
+.purchase>p {
     margin: 0 0 1.5rem 0;
     line-height: 1.5;
 }
 
 .purchase-content img {
+    width: 100%;
     max-width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
@@ -347,7 +349,7 @@ form {
     padding: 0.85rem;
     font-family: var(--font-body);
     font-size: 1rem;
-    border: 1px solid #CFC7BF;
+    border: 1px solid var(--color-border);
     background-color: var(--color-white);
     border-radius: 0.75rem;
 }
@@ -369,7 +371,7 @@ form button {
     padding: 0.85rem 1.5rem;
     border: none;
     background-color: var(--color-berry);
-    color: var(--color-white);    
+    color: var(--color-white);
     font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
@@ -429,11 +431,12 @@ footer {
     }
 
     .purchase-content form {
-        width: 55%;
+        flex: 1;
     }
 }
 
 @media (min-width: 768px) {
+
     header {
         flex-wrap: nowrap;
         align-items: center;
@@ -467,6 +470,7 @@ footer {
     nav a:hover {
         color: var(--color-berry);
     }
+
     .hero {
         height: 30rem;
     }
@@ -506,17 +510,10 @@ footer {
     .info-block {
         flex-direction: row;
         align-items: center;
-
     }
 
     .info-block:nth-child(2) {
         flex-direction: row-reverse;
-    }
-
-    .info-text,
-    .info-image {
-        width: auto;
-        flex: 1;
     }
 
     .info-image {
@@ -532,24 +529,26 @@ footer {
     }
 
     .purchase h2 {
-    font-size: 2.2rem;
-}
+        font-size: 2.2rem;
+    }
+
     form button:hover {
         background-color: var(--color-wine);
         transform: translateY(-1px);
     }
 
     footer {
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         gap: 2rem;
-        padding: 2.5rem 3rem
+        padding: 2.5rem 3rem;
     }
 
-        .footer-block {
+    .footer-block {
         width: 30%;
     }
-        .footer-block:nth-child(2) {
+
+    .footer-block:nth-child(2) {
         text-align: center;
     }
 
@@ -560,32 +559,33 @@ footer {
 
 @media (min-width: 1024px) {
     .hero {
-    height: 36rem;
-}
+        height: 36rem;
+    }
 
-.hero-content {
-    left: auto;
-    right: 4rem;
-    bottom: 5rem;
+    .hero-content {
+        left: auto;
+        right: 4rem;
+        bottom: 5rem;
 
-    width: 42%;
-    padding: 2.5rem;
-}
+        width: 42%;
+        padding: 2.5rem;
+    }
 
-.hero-content .eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    margin: 0 0 0.6rem 0;
-}
+    .hero-content .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.16em;
+        margin: 0 0 0.6rem 0;
+    }
 
-.hero-content h1 {
-    font-size: 3rem;
-}
+    .hero-content h1 {
+        font-size: 3rem;
+    }
 
-.hero-content p {
-    font-size: 1rem;
-    line-height: 1.55;
-}
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
     .book-author,
     .content,
     .purchase {
@@ -594,10 +594,28 @@ footer {
 
     .book-author {
         padding-top: 7rem;
+        gap: 4rem;
+
     }
+
+    .info-block {
+        max-width: 68rem;
+        margin: 0 auto;
+    }
+
+    .content .section-label {
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto 0.5rem auto;
+    }
+
     .content h2 {
         font-size: 2.4rem;
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto 3rem auto;
     }
+
     .chapters {
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 60rem;
@@ -607,16 +625,33 @@ footer {
     }
 
     .purchase-content {
-        flex-direction: row;    
+        flex-direction: row;
         gap: 2rem;
         align-items: stretch;
         max-width: 1100px;
         margin: 0 auto;
     }
 
+    .purchase .section-label {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto 0.5rem auto;
+    }
+
     .purchase h2 {
-    font-size: 2.4rem;
-}
+        font-size: 2.4rem;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto 1rem auto;
+    }
+
+    .purchase>p {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto 1.5rem auto;
+
+    }
+
     .purchase-content img {
         width: 42%;
         height: auto;
@@ -624,7 +659,7 @@ footer {
     }
 
     .purchase-content form {
-        width: 58%;
+        flex: 1;
     }
 
     footer {
@@ -637,6 +672,7 @@ footer {
     .footer-block {
         width: 30%;
     }
+
     .footer-block h3 {
         margin-top: 0;
         margin-bottom: 0.5rem;
