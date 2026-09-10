@@ -9,7 +9,7 @@
     --color-berry: #8E4162;
     --color-wine: #6F2F49;
     --color-black: #252422;
-    --color-cream: #F6F2EC;
+    --color-cream: #f7f1e9;
     --color-white: #FFFDF9;
     --color-sage: #7B8576;
 
@@ -84,7 +84,7 @@ nav a:active {
 
 .hero {
     position: relative;
-    height: 20rem;
+    height: 30rem;
     overflow: hidden;
 }
 
@@ -94,7 +94,6 @@ nav a:active {
     object-fit: cover;
     object-position: 70% center;
     display: block;
-
 }
 
 .hero-content {
@@ -103,12 +102,24 @@ nav a:active {
     position: absolute;
     justify-content: center;
     align-items: flex-start;
-    right: 1rem;
+    left: 1.25rem;
+    right: 1.25rem;
     bottom: 1rem;
-    width: 75%;
-    padding: 2rem;
-    background-color: transparent;
-    color: var(--color-cream);    
+    padding: 1.25rem;
+    width: 74%;
+    background-color: var(--color-cream);
+    color: var(--color-black);  
+    border-radius: 0.15rem; 
+}
+
+.hero-content .eyebrow {
+    font-family: var(--font-body);
+    color: var(--color-berry);
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    margin: 0 0 0.4rem 0;
+    border-left: 1px solid var(--color-berry);
+    padding-left: 0.5rem;
 }
 
 h1,
@@ -117,34 +128,36 @@ h3 {
     font-family: var(--font-heading);
     font-weight: 400;
 }
-.hero-content h1,
+
+.hero-content h1 {
+    color: var(--color-black);
+    font-size: 2rem;
+    line-height: 1.05;
+    margin: 0 0 0.75rem 0;
+}
+
 .hero-content p {
-    color: var(--color-cream);
-    text-shadow: 0 2px 6px rgba(37, 36, 34, 0.6);
-}
-
-.hero-content p,
-.eyebrow,
-.cta-button {
     font-family: var(--font-body);
+    color: var(--color-black);
+    margin: 0 0 1.25rem 0;
+    line-height: 1.45;
 }
 
-.section-label, .eyebrow {
-    letter-spacing: 0.15em;
-    font-size: 0.8rem;
-}
-
-.eyebrow {
-    color: var(--color-berry);
-}
 
 .cta-button {
     font-family: var(--font-body);
     background-color: var(--color-berry);
-    color: var(--color-white);
+    color: var(--color-cream);
     text-decoration: none;
-    padding: 0.75em 1.5em;
+    padding: 0.7em 1.7em;
     display: inline-block;
+    border-radius: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .book-author {
@@ -353,6 +366,7 @@ footer {
 .footer-block h3 {
     font-family: var(--font-heading);
 }
+
 .footer-block p {
     margin: 0;
 }
@@ -398,6 +412,30 @@ footer {
 
     nav a:hover {
         color: var(--color-berry);
+    }
+    .hero {
+        height: 30rem;
+    }
+
+    .hero-content {
+        left: auto;
+        right: 2.5rem;
+        bottom: 2.5rem;
+        width: 48%;
+        padding: 2.25rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content .eyebrow {
+        font-size: 0.7rem;
+    }
+
+    .cta-button:hover {
+        background-color: var(--color-wine);
+        transform: translateY(-1px);
     }
 
     .book-author,
@@ -463,6 +501,33 @@ footer {
 }
 
 @media (min-width: 1024px) {
+    .hero {
+    height: 36rem;
+}
+
+.hero-content {
+    left: auto;
+    right: 4rem;
+    bottom: 5rem;
+
+    width: 42%;
+    padding: 2.5rem;
+}
+
+.hero-content .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    margin: 0 0 0.6rem 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.55;
+}
     .book-author,
     .content,
     .purchase {
